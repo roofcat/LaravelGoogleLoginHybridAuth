@@ -37,8 +37,8 @@ class AuthController extends BaseController
 
 	public function getLoggedOut()
 	{
-		$gauth = new Hybrid_auth(app_path().'/config/google_oauth.php');
+		$gauth = new Hybrid_Auth(app_path().'/config/google_oauth.php');
 		$gauth->logoutAllProviders();
-
+		return Redirect::to('');
 	}
 }
